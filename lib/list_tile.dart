@@ -15,7 +15,10 @@ class ListTileForm extends StatelessWidget {
           name,
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
-        subtitle: Text(location),
+        subtitle: Text(
+          location,
+          style: TextStyle(color: Colors.black),
+        ),
         onTap: onTap,
       ),
     );

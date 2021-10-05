@@ -17,7 +17,11 @@ class ConferenceDetail extends StatelessWidget {
     String formatEnddate =
         dateFormat.format(DateTime.parse(conferencedata.end));
     return Scaffold(
-      appBar: AppBar(title: Text('')),
+      appBar: AppBar(
+        title: Text(''),
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+      ),
       body: Padding(
         padding: const EdgeInsets.only(top: 20),
         child: Column(
