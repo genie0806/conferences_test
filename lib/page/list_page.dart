@@ -50,7 +50,7 @@ class ConferencesList extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) => ConferenceDetail(
-                                Conferencedata: e,
+                                conferencedata: e,
                               ),
                             ),
                           );
