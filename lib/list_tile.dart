@@ -3,16 +3,21 @@ import 'package:flutter/material.dart';
 class ListTileForm extends StatelessWidget {
   final String name;
   final String location;
-  const ListTileForm({Key key, this.name, this.location}) : super(key: key);
+  final Function onTap;
+  const ListTileForm({Key key, this.name, this.location, this.onTap})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(
-        name,
-        style: TextStyle(fontWeight: FontWeight.bold),
+    return Card(
+      child: ListTile(
+        title: Text(
+          name,
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        subtitle: Text(location),
+        onTap: onTap,
       ),
-      subtitle: Text(location),
     );
   }
 }
