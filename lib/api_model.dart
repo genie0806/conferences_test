@@ -10,5 +10,6 @@ Future<List<ConferenceModel>> fetchConference() async {
   Iterable jsonResponse = convert.jsonDecode(response.body);
   List<ConferenceModel> conferences =
       jsonResponse.map((e) => ConferenceModel.fromJson(e)).toList();
+
   return conferences;
 }
