@@ -5,7 +5,9 @@ import 'package:conference_test/page/detail_page.dart';
 import 'package:flutter/material.dart';
 
 class ConferencesList extends StatelessWidget {
-  const ConferencesList({Key key}) : super(key: key);
+  const ConferencesList({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +39,7 @@ class ConferencesList extends StatelessWidget {
             return const Text('데어터가 없습니다.');
           }
 
-          List<ConferenceModel> conferences = snapshot.data;
+          List<ConferenceModel> conferences = snapshot.data ?? [];
           return Column(
               children: conferences
                   .map(

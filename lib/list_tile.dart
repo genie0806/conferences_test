@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 class ListTileForm extends StatelessWidget {
   final String name;
   final String location;
-  final Function onTap;
-  const ListTileForm({Key key, this.name, this.location, this.onTap})
+  final Function() onTap;
+  const ListTileForm(
+      {Key? key,
+      required this.name,
+      required this.location,
+      required this.onTap})
       : super(key: key);
 
   @override

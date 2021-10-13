@@ -5,7 +5,8 @@ import 'package:url_launcher/url_launcher.dart';
 
 class ConferenceDetail extends StatelessWidget {
   final ConferenceModel conferencedata;
-  const ConferenceDetail({Key key, this.conferencedata}) : super(key: key);
+  const ConferenceDetail({Key? key, required this.conferencedata})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

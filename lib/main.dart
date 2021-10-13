@@ -6,7 +6,7 @@ void main() {
 }
 
 class ConferencesTest extends StatelessWidget {
-  const ConferencesTest({Key key}) : super(key: key);
+  const ConferencesTest({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
