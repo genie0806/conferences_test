@@ -16,7 +16,7 @@ class ConferenceDetail extends StatelessWidget {
         dateFormat.format(DateTime.parse(conferencedata.end));
     return Scaffold(
       appBar: AppBar(
-        title: Text(''),
+        title: const Text(''),
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
       ),
@@ -29,7 +29,8 @@ class ConferenceDetail extends StatelessWidget {
               child: ListTile(
                 title: Text(
                   conferencedata.name,
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 30),
                 ),
               ),
             ),
@@ -37,14 +38,14 @@ class ConferenceDetail extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(30, 20, 0, 0),
               child: Text(
                 conferencedata.location,
-                style: TextStyle(fontSize: 23),
+                style: const TextStyle(fontSize: 23),
               ),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(30, 20, 0, 0),
               child: Text(
-                '${formatStartdate + ' ~ ' + formatEnddate}',
-                style: TextStyle(fontSize: 23),
+                formatStartdate + ' ~ ' + formatEnddate,
+                style: const TextStyle(fontSize: 23),
               ),
             ),
             Padding(
@@ -53,7 +54,7 @@ class ConferenceDetail extends StatelessWidget {
                 onPressed: () {
                   launch(conferencedata.link);
                 },
-                child: Text(
+                child: const Text(
                   'Go to official website',
                   style: TextStyle(fontSize: 20),
                 ),

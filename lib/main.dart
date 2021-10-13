@@ -10,6 +10,6 @@ class ConferencesTest extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'ConferencesTest', home: ConferencesList());
+    return const MaterialApp(title: 'ConferencesTest', home: ConferencesList());
   }
 }

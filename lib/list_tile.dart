@@ -13,11 +13,11 @@ class ListTileForm extends StatelessWidget {
       child: ListTile(
         title: Text(
           name,
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         subtitle: Text(
           location,
-          style: TextStyle(color: Colors.black),
+          style: const TextStyle(color: Colors.black),
         ),
         onTap: onTap,
       ),

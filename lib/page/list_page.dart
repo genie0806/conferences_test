@@ -11,7 +11,7 @@ class ConferencesList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Conferences',
           style: TextStyle(color: Colors.black),
         ),
@@ -19,11 +19,11 @@ class ConferencesList extends StatelessWidget {
       ),
       body: FutureBuilder<List<ConferenceModel>>(
         future: fetchConference(),
-        initialData: [],
+        initialData: const [],
         builder: (BuildContext context,
             AsyncSnapshot<List<ConferenceModel>> snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(
+            return const Center(
                 child: SizedBox(
               child: CircularProgressIndicator(),
               width: 200,
@@ -31,33 +31,32 @@ class ConferencesList extends StatelessWidget {
             ));
           }
           if (snapshot.hasError) {
-            return Text('에러가 발생했습니다.');
+            return const Text('에러가 발생했습니다.');
           }
           if (!snapshot.hasData) {
-            return Text('데어터가 없습니다.');
+            return const Text('데어터가 없습니다.');
           }
 
           List<ConferenceModel> conferences = snapshot.data;
-          return Column(children: 
-            conferences
-                .map(
-                  (e) => ListTileForm(
-                    name: e.name,
-                    location: e.location,
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ConferenceDetail(
-                            conferencedata: e,
+          return Column(
+              children: conferences
+                  .map(
+                    (e) => ListTileForm(
+                      name: e.name,
+                      location: e.location,
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ConferenceDetail(
+                              conferencedata: e,
+                            ),
                           ),
-                        ),
-                      );
-                    },
-                  ),
-                )
-                .toList()
-          );
+                        );
+                      },
+                    ),
+                  )
+                  .toList());
         },
       ),
     );
