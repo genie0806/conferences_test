@@ -1,6 +1,6 @@
 import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
-import 'package:conference_test/model/conference_model';
+import 'package:conference_test/model/conference_model.dart';
 
 const conferenceUrl =
     'https://raw.githubusercontent.com/junsuk5/mock_json/main/conferences.json';

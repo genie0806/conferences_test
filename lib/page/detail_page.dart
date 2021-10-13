@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:conference_test/api_model.dart';
-import 'package:conference_test/list_tile.dart';
-import 'package:conference_test/model/conference_model';
+import 'package:conference_test/model/conference_model.dart';
 import 'package:intl/intl.dart';
 import 'package:url_launcher/url_launcher.dart';
 
